@@ -1,0 +1,6 @@
+{
+  "name": "Monitoring",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./Monitoring.js"
+}
