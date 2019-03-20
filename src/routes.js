@@ -1,5 +1,7 @@
 import React from 'react';
 import DefaultLayout from './containers/DefaultLayout';
+import RLDashboardTabA from './views/EY/RLDashboard/RLDashboardTabA';
+import RLDashboardTabB from './views/EY/RLDashboard/RLDashboardTabB';
 
 const Breadcrumbs = React.lazy(() => import('./views/Base/Breadcrumbs'));
 const Cards = React.lazy(() => import('./views/Base/Cards'));
@@ -43,6 +45,8 @@ const routes = [
   { path: '/dashboard', name: 'Dashboard', component: Dashboard },
   { path: '/ey', exact: true, name: 'EY', component: RLDashboard },
   { path: '/ey/rldashboard', name: 'RLDashboard', component: RLDashboard },
+  { path: '/ey/rldashboard/TabA', name: 'RLDashboard', component: RLDashboardTabA},
+  { path: '/ey/rldashboard/TabB', name: 'RLDashboard', component: RLDashboardTabB },
   { path: '/ey/monitoring', name: 'Monitoring', component: Monitoring },
   { path: '/base', exact: true, name: 'Base', component: Cards },
   { path: '/base/cards', name: 'Cards', component: Cards },
