@@ -64,14 +64,14 @@ const expandRowTab = {
       <p>{`Details of ${row.name}`}
       </p>
       <Router>
-      <ul class="nav">
+      <ul className="nav">
       <button type="button" style={updateStyle} className="btn btn-primary"><li className="nav-item">Update</li></button>
         
-        <button type="button" class="btn btn-primary"><li class="nav-item">
-          <Link style={buttonStyle} class="nav-link active" to="/ey/rldashboard/TabA">Overview</Link>
+        <button type="button" className="btn btn-primary"><li className="nav-item">
+          <Link style={buttonStyle} className="nav-link active" to="/ey/rldashboard/TabA">Overview</Link>
         </li> </button>
-        <button type="button" class="btn btn-primary"><li class="nav-item">
-          <Link style={buttonStyle} class="nav-link active" to="/ey/rldashboard/TabB">Model Explanation</Link>
+        <button type="button" className="btn btn-primary"><li className="nav-item">
+          <Link style={buttonStyle} className="nav-link active" to="/ey/rldashboard/TabB">Model Explanation</Link>
         </li> </button>
       </ul>
         <Route path="/ey/rldashboard/TabA" component={RLDashboardTabA}/>
