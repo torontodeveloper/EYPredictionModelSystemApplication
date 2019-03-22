@@ -15,6 +15,7 @@
     "chart.js": "^2.7.3",
     "classnames": "^2.2.6",
     "core-js": "^2.6.5",
+    "d3": "^5.9.2",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.10.0",
     "flag-icon-css": "^3.3.0",

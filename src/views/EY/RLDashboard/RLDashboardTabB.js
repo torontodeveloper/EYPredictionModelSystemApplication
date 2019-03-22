@@ -44,6 +44,10 @@ const columns = [{
   {
     dataField: 'balance',
     text: 'Total Current Balance'
+  },
+  {
+    dataField: 'anamoly',
+    text: 'Anamoly'
   }
 ];
 const imgStyle={
