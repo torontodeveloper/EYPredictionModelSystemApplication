@@ -1,7 +1,8 @@
 import React from 'react';
 import img1 from './../../../assets/img/brand/forceplot_0.png';
 import BootstrapTable from 'react-bootstrap-table-next';
-
+import cellEditFactory from 'react-bootstrap-table2-editor';
+import { Type } from 'react-bootstrap-table2-editor';
 const products = [ 
     {  'installment':543.23, 'fico': 689,'ownership':'MORTGAGE','income':110000,'loanAmount':5600,'loanPurpose':'debt_consolidation','terms':'36 months','balance':213701,'details':'Trade stocks listed on major North American exchanges, as well as stocks sold over-the-counter in Canada and the U.S.'},
     {  'installment':543.23, 'fico': 689,'ownership':'MORTGAGE','income':120000,'loanAmount':7600,'loanPurpose':'car','terms':'36 months','balance':213701,'details':'Trade stocks listed on major North American exchanges, as well as stocks sold over-the-counter in Canada and the U.S.'},
@@ -47,7 +48,18 @@ const columns = [{
   },
   {
     dataField: 'anamoly',
-    text: 'Anamoly'
+    text: 'Anamoly',
+    editor: {
+      type: Type.SELECT,
+      options: [{
+        value: 'true',
+        label: 'True '
+      },
+      {
+        value: 'false',
+        label: 'False'
+      }]
+    }
   }
 ];
 const imgStyle={
@@ -70,7 +82,7 @@ class RLDashboardTabB extends React.Component{
                 <h4 className="card-title">Nearest Neighbours</h4>
                 </div>
             </div>
-    <BootstrapTable keyField='id' data={ products } columns={ columns } />
+    <BootstrapTable keyField='id' data={ products } columns={ columns } cellEdit={ cellEditFactory({ mode: 'click' }) } />
                 
             </div>
         ) 
